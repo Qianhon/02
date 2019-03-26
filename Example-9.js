@@ -18,6 +18,24 @@ for (i = 1; i<=10000; i++){
 }
 console.log('總共有'+ total+ ' 個質數。')
 
+//印出聖誕樹 - 拆解所求成小各個小函式的組合
+function toptree(n){
+	for(var i=1; i<=n; i++){
+		console.log(' '.repeat(n-i)+'*'.repeat(2*i-1))
+	}
+}
+
+function bottomtree(n){
+	for(var i=1; i<=n; i++){
+		console.log(' '.repeat(n-1)+'*')
+	}
+}
+
+function tree(n){
+	toptree(n)
+	bottomtree(n)
+}
+
 //排序就是找N次最小值
 function findMin(arr){
 	var min = arr[0]
