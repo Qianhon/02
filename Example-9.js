@@ -75,3 +75,24 @@ function flatten(arr){
 	}
 	return result
 }
+
+//二維陣列取值判斷 - OOXX 結果
+function winner(arr){
+	for(var i=0; i<=2; i++){
+		if( (arr[i][0] === arr[i][1]) && (arr[i][1] === arr[i][2])){
+			return arr[i][0]
+		}
+	}
+	for(var j=0; j<=2; j++){
+		if( (arr[0][j] === arr[1][j]) && (arr[1][j] === arr[2][j])){
+			return arr[0][j]
+		}
+	}
+	if( (arr[0][0] === arr[1][1]) && (arr[1][1] === arr[2][2])){
+			return arr[1][1]
+		}
+	if( (arr[0][2] === arr[1][1]) && (arr[1][1] === arr[2][0])){
+			return arr[1][1]
+		}else 
+		return 'draw'
+}
